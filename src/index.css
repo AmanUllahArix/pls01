@@ -1,0 +1,476 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 45px;
+  color: #212529;
+  background-color: #ddd5f3;
+   
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 58px;
+ 
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.menus {
+  display: flex;
+  list-style: none;
+  
+}
+
+.menu-items {
+  position: relative;
+  font-size: 14px;
+}
+.menu-itemss {
+  position: relative;
+ 
+}
+
+.menu-items a {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  /* added later */
+  min-width: 8rem;
+  border-radius: 2%; 
+}
+
+.menu-itemss a {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  /* added later */
+  min-width: auto; 
+  border-radius: 2%; 
+}
+
+.menu-itemss button {
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  min-width: auto; 
+  border-radius: 2%; 
+  
+}
+
+.menu-items button {
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  min-width: 8rem;
+  border-radius: 2%; 
+}
+
+.menu-items a,
+.menu-items button {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  
+}
+
+.menu-itemss a,
+.menu-itemss button {
+  text-align: center;
+  padding: 0.7rem 1rem;
+  
+}
+
+.menu-items a:hover,
+.menu-items button:hover {
+  background-color: #e6e6f7;
+}
+
+.menu-itemss a:hover,
+.menu-itemss button:hover {
+  background-color: #e6e6f7;
+}
+
+
+
+.dropdown {
+  position: absolute; 
+  right: 0;
+  left: auto;
+  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+    0 4px 6px -2px rgba(71, 63, 79, 0.16);
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 8rem; 
+  padding: 0rem 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: none; 
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dropdown .dropdown-submenu .button {
+  color: red;
+}
+
+.dropdowns {
+  position: absolute; 
+  right: 25%;
+  left: auto;
+  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+    0 4px 6px -2px rgba(71, 63, 79, 0.16);
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 5rem; 
+  padding: 0rem 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: none; 
+}
+
+.dropdowns .dropdown-submenus {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dropdowns.show {
+  display: block;
+}
+
+.arrown {
+  content: "";
+  display: inline-block;
+  margin-left: 0.28em;
+  vertical-align: -0.2em;
+  transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+}
+
+.arrow::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.28em;
+  vertical-align: 0.09em;
+  border-top: 0.42em solid;
+  border-right: 0.32em solid transparent;
+  border-left: 0.32em solid transparent;
+}
+
+.hrnew {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color : gray;
+
+}
+.cont {
+  position: relative;
+  text-align: center;
+  color: rgb(26, 24, 24);
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 30px;
+}
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 2px;
+  right: 30px;
+}
+
+#wrap {
+  width: 750px;
+  height: 1500px;
+  padding: 0;
+  overflow: hidden;
+}
+
+#scaled-frame {
+  width: 1000px;
+  height: 2000px;
+  border: 0px;
+}
+
+iframe 
+{
+ display: block; 
+ width: 100%; 
+ border: none; 
+ overflow-y: auto; 
+ overflow-x: hidden;
+}
+
+#target {
+  width: 400px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;
+  resize: both;
+  position: relative;
+  z-index: 2;
+}
+
+#scaled-frame {
+  zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #scaled-frame {
+    zoom: 1;
+  }
+}
+
+.row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;}
+
+.second-row { flex-grow: 1; border: none; margin: 0; padding: 0; }
+
+
+.mirrorer {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.flipper {
+  transform: rotate(180deg);
+}
+.landscaper {
+  padding-left: 0%;
+  transform: rotate(90deg);
+}
+
+.navigation {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: none;
+  padding: 0;
+  margin-top :1rem;
+  z-index: 1000;
+}
+
+.navigation-menua ul {
+  display: block;
+  padding: 0;
+}
+
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+
+.hamburger {
+  border: 0;
+  height: 30px;
+  width: 30px;
+  padding: 0rem;
+  border-radius: 20%;
+  background-color: #9a9b9e;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.hamburger:hover {
+  background-color: #ecedf0;
+}
+
+.rotation-wrapper-outer {
+  display: table;
+  background-color: black;
+}
+.rotation-wrapper-inner {
+  padding: 0% 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.element-to-rotate {
+  
+  background-color: black;
+  display: block;
+  transform-origin: top left;
+  /* Note: for a CLOCKWISE rotation, use the commented-out
+     transform instead of this one. */
+  transform: rotate(-90deg) translate(-100%);
+  /* transform: rotate(90deg) translate(0, -100%); */
+  margin-top: -50%;
+  
+  /* Not vital, but possibly a good idea if the element you're rotating contains
+     text and you want a single long vertical line of text and the pre-rotation
+     width of your element is small enough that the text wraps: */
+  white-space: nowrap;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+  .brand-name {
+    margin-left: 3rem;
+    
+  }
+}
+@media screen and (min-width: 769px) {
+  .navigation-menu.expanded ul {
+    display: none;
+    
+  }
+  .brand-name {
+    margin-left: 1rem;
+    
+  }
+
+  .navigation-menu ul {
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-menu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
+  .navigation-menu li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+}
+
+.amancolumn {
+  border: 1px solid black;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+/* Clear floats after the columns */
+.amanrow:after {
+  border: 1px solid black;
+  content: "";
+  display: table;
+  clear: both;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+}
